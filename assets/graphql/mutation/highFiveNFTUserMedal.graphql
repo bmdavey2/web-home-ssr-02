@@ -1,0 +1,8 @@
+mutation highFiveNFTUserMedal($id: String!) {
+  highFiveNFTUserMedal(id: $id) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

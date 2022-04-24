@@ -1,0 +1,8 @@
+mutation unsave($targetGetStreamActivityID: String!) {
+  unsave(targetGetStreamActivityID: $targetGetStreamActivityID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

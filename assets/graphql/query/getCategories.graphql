@@ -1,0 +1,8 @@
+query getCategories {
+  Categories {
+    id
+    name
+    PhotoURL
+    parent
+  }
+}

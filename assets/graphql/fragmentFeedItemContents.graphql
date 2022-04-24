@@ -1,0 +1,110 @@
+fragment FeedItemContents on FeedItemGroup {
+  items {
+    id
+    timestamp
+    actorType
+    actorID
+    objectType
+    objectID
+    Categories {
+      id
+      name
+    }
+    CategoryIDs
+    Member {
+      id
+      name
+      slug
+      profilePhotoURL(type: "100")
+      isFollowed
+      Categories {
+        name
+      }
+    }
+    Business {
+      id
+      name
+      slug
+      profilePhotoURL
+      isFollowed
+      Categories {
+        name
+      }
+      plan
+    }
+    Update {
+      id
+      slug
+      content
+      isNFTMedal
+      Media {
+        objectID
+        objectType
+        fileName
+        PhotoURL(type: "500")
+        VideoURL
+        orientation
+        Pin {
+          photoID
+          Tags {
+            xCoordinate
+            yCoordinate
+            Product {
+              title
+              slug
+              coverPhotoURL
+              type
+              startDate
+              Categories {
+                PhotoURL
+              }
+            }
+          }
+        }
+      }
+      productID
+      ProductTheme {
+        id
+        backgroundColor
+        fontColor
+        buttonColor
+        circleColor
+      }
+    }
+    Article {
+      id
+      slug
+      title
+      excerpt
+      coverPhotoURL(type: "500")
+      content
+    }
+    Aggregates {
+      likes
+      comments
+    }
+    Comments {
+      items {
+        id
+        timestamp
+        actorType
+        content
+        Member {
+          name
+          profilePhotoURL
+        }
+        Business {
+          name
+          profilePhotoURL
+        }
+        Aggregates {
+          likes
+        }
+        isLiked
+      }
+      next
+    }
+    isLiked
+    isSaved
+  }
+}

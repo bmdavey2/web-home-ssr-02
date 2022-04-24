@@ -1,0 +1,8 @@
+mutation saveProduct($id: String!) {
+  saveProduct(id: $id) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

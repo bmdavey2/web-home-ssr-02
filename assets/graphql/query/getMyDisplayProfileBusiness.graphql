@@ -1,0 +1,9 @@
+query getMyDisplayProfileBusiness($id: String!) {
+  result: Business(id: $id) {
+    id
+    slug
+    name
+    profilePhotoURL
+    plan
+  }
+}

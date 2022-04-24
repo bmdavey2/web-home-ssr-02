@@ -1,0 +1,85 @@
+#import '../fragmentFeedItemContents.graphql'
+#import './fragment/SocialProfile.graphql'
+#import './fragment/Gallery.graphql'
+#import './fragment/NFTUserMedal.graphql'
+
+fragment MemberContents on Member {
+  id
+  createdAt
+  updatedAt
+  slug
+  email
+  firstName
+  lastName
+  signUpNumber
+  profilePhotoID
+  coverPhotoID
+  backgroundColor
+  gender
+  country
+  postalCode
+  suburb
+  city
+  state
+  CategoryIDs
+  personalStatus
+  biography
+  quotes
+  ap5FavoriteEvents
+  ap5InspiredBy
+  ap5PassionateAbout
+  ap5ToughestThing
+  ap5TrainingWith
+  claimed
+  partners
+  name
+  profilePhotoURL(type: $profilePhotoSize)
+  coverPhotoURL
+  isFollowed
+  Activities {
+    ...FeedItemContents
+    count
+    next
+    total
+  }
+  Categories {
+    id
+    createdAt
+    updatedAt
+    name
+    iconName
+    summary
+    PhotoID
+    parent
+    archived
+    productCategory
+    communityInterest
+    PhotoURL
+  }
+  Follows {
+    ...SocialProfileContents
+  }
+  Followers {
+    ...SocialProfileContents
+  }
+  Saves {
+    ...FeedItemContents
+    count
+    next
+    total
+  }
+  Gallery {
+    ...GalleryContents
+  }
+  Partners {
+    ...SocialProfileContents
+  }
+  Medals {
+    items {
+      ...NFTUserMedalContents
+    }
+    count
+    next
+    total
+  }
+}

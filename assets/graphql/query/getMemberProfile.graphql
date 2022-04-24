@@ -1,0 +1,7 @@
+#import '../fragment/Member.graphql'
+
+query getMemberProfile($id: String, $slug: String, $UserID: String, $profilePhotoSize: String) {
+  Member(id: $id, slug: $slug, UserID: $UserID) {
+    ...MemberContents
+  }
+}

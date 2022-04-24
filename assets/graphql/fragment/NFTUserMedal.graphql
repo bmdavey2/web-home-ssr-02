@@ -1,0 +1,26 @@
+fragment NFTUserMedalContents on NFTUserMedal {
+  id
+  slug
+  blockchainHash
+  place
+  time
+  distance
+  distanceUnit
+  distanceType
+  overallFinish
+  ageGroupFinish
+  userSlug
+  Medal {
+    Media {
+      PhotoURL
+      VideoURL
+      VideoThumbnail
+      objectType
+      orientation
+    }
+  }
+  Product {
+    title
+    slug
+  }
+}

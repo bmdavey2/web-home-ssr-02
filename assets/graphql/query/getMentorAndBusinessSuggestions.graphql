@@ -1,0 +1,16 @@
+query getMentorAndBusinessSuggestions($text: String!) {
+  MentorAndBusinessSuggestions(text: $text) {
+    objectID
+    objectType
+    Business {
+      name
+      slug
+      profilePhotoURL
+    }
+    Member {
+      name
+      slug
+      profilePhotoURL
+    }
+  }
+}

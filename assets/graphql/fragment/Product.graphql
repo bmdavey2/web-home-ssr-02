@@ -1,0 +1,124 @@
+#import './fragment/Media.graphql'
+#import './fragment/Business.graphql'
+
+fragment ProductContents on Product {
+  id
+  createdAt
+  slug
+  type
+  title
+  coverPhotoID
+  description
+  UserID
+  actorID
+  actorType
+  CategoryIDs
+  parentID
+  repeats
+  hibernation
+  status
+  hidden
+  inquiryType
+  externalURL
+  startDate
+  endDate
+  startTime
+  endTime
+  timezone
+  virtual
+  address1
+  city
+  state
+  country
+  postcode
+  suburb
+  pricing
+  priceAmount
+  priceAmountMax
+  currency
+  isFavorite
+  Distance {
+    id
+    distance
+    distanceUnit
+    distanceType
+    hasMedal
+  }
+  recommendsCount
+  viewsCount
+  savesCount
+  viewerCurrency
+  viewerPrice
+  viewerPriceMax
+  businessPaidPlan
+  Media {
+    ...MediaContents
+  }
+  AdditionalInformation {
+    objectID
+    objectType
+    fileName
+    fileSize
+    fileType
+    FileURL
+  }
+  sponsorIDs
+  isNFTMedal
+  isSaved
+  Categories {
+    id
+    createdAt
+    updatedAt
+    name
+    iconName
+    summary
+    PhotoID
+    parent
+    archived
+    productCategory
+    communityInterest
+    PhotoURL
+  }
+  Business {
+    ...BusinessContents
+  }
+  coverPhotoURL(type: $coverPhotoSize)
+  Sponsors {
+    id
+    name
+    PhotoURL
+    externalURL
+  }
+  NFTMedals {
+    items {
+      id
+      createdAt
+      medalDescription
+      productID
+      slug
+      Media {
+        ...MediaContents
+      }
+      highFives
+      isHighFived
+      Racer {
+        items {
+          id
+        }
+        count
+        next
+        total
+      }
+    }
+    count
+    next
+    total
+  }
+  ProductTheme {
+    id
+    backgroundColor
+    fontColor
+    buttonColor
+    circleColor
+  }
+}

@@ -1,0 +1,44 @@
+#import '../fragment/Member.graphql'
+
+fragment ArticleContents on Article {
+  id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  subtitle
+  coverCaption
+  coverPhotoID
+  excerpt
+  slug
+  CategoryIDs
+  actor
+  MemberID
+  BusinessID
+  UserID
+  content
+  Aggregates {
+    comments
+    highFives
+    views
+    saves
+    likes
+  }
+  Categories {
+    id
+    name
+    iconName
+    parent
+    PhotoURL
+  }
+  Member {
+    ...MemberContents
+  }
+  Business {
+    id
+  }
+  FeedItem {
+    id
+  }
+  coverPhotoURL(type: $coverPhotoSize)
+}

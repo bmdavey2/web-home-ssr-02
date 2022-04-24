@@ -1,0 +1,19 @@
+#import './Member.graphql'
+
+fragment SocialProfileContents on SocialProfile {
+  objectID
+  objectType
+  Member {
+    id
+    slug
+    firstName
+    lastName
+    profilePhotoURL(type: "100")
+  }
+  Business {
+    id
+    slug
+    name
+    profilePhotoURL(type: "100")
+  }
+}

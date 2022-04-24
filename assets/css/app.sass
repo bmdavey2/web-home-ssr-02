@@ -1,0 +1,208 @@
+/* stylelint-disable no-descending-specificity */
+@import '~assets/css/lib/Editor.scss'
+@import '~assets/css/lib/Mention.scss'
+@import '~assets/css/lib/Alignment.scss'
+@import '~assets/css/lib/Typography.scss'
+
+*
+  outline: none
+  -webkit-tap-highlight-color: transparent
+  box-sizing: border-box
+
+html
+  font-size: 14px
+  font-weight: 400
+  background-color: #f8f8f8
+
+a
+  color: #25A9E0
+
+.container
+  padding-left: 15px
+  padding-right: 15px
+
+.is-cursor-pointer
+  cursor: pointer
+
+.is-user-select-none
+  user-select: none
+
+.no-margin
+  margin: 0 !important
+
+.no-padding
+  padding: 0 !important
+
+.flex
+  display: flex
+
+.align-center
+  align-items: center
+
+.flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+.flex-auto
+  flex: 0 0 auto
+
+.flex-grow
+  flex: 1 0 0
+
+.fill
+  width: 100%
+  height: 100%
+
+.text-center
+  text-align: center
+
+.no-wrap
+  flex-wrap: nowrap
+
+.button-icon
+  border-radius: 50%
+  transition: background-color .25s
+  &:hover
+    background: #F5F5F5
+
+.form-input,
+.form-mobile-number,
+.form-textarea,
+.form-datepicker
+  .field
+    margin-bottom: 3px
+
+    .label
+      font-weight: 400
+      color: #65676B
+      margin-bottom: 3px
+
+    .control
+      textarea,
+      input
+        box-shadow: none
+        border: 1px solid #dbdbdb
+        font-weight: 300
+        font-size: 16px
+        resize: none
+
+        &::placeholder
+          color: #65676b
+
+        &:-ms-input-placeholder
+          color: #65676b
+
+  textarea
+    font-size: 16px
+    font-weight: 300
+    padding: calc(0.75rem - 1px)
+    border-radius: 4px
+    line-height: 1.5
+    width: 100%
+    color: #363636
+    background-color: #fff
+    border: 1px solid #dbdbdb
+    outline: none
+
+    &.disabled,
+    &:disabled
+      background-color: whitesmoke
+      cursor: not-allowed
+
+  .input-error
+    font-size: 0.8571rem
+    font-weight: 300
+
+  &.is-auto-grow
+    .input-error
+      margin-top: -3px
+
+.control
+  textarea,
+  input,
+  select
+    box-shadow: none
+    border: 1px solid #dbdbdb !important
+    font-weight: 300
+    font-size: 16px
+    resize: none
+
+    &::placeholder
+      color: #65676b
+
+    &:-ms-input-placeholder
+      color: #65676b
+
+    option[disabled="disabled"]
+      color: #65676b
+      opacity: 1
+
+  .select
+    height: auto !important
+
+  .select.is-empty select
+    color: #65676b
+
+.is-flex-width-auto
+  flex: 10000 1 0
+
+.has-text-secondary
+  color: #0c353e !important
+
+[contenteditable]:empty::before
+  content: attr(placeholder)
+  pointer-events: none
+  display: block
+  color: #ccc
+
+.b-checkbox
+  align-items: flex-start !important
+
+.button
+  &.is-secondary
+    &:hover
+      background-color: $secondary
+
+      &.is-outlined
+        border-color: $secondary
+        color: #fff
+        background-color: $secondary
+
+    &:focus
+      box-shadow: none !important
+      border-color: $secondary !important
+      color: $secondary
+
+    &.is-outlined
+      border-color: $secondary
+      color: $secondary
+      background-color: transparent
+
+.modal
+  z-index: 100
+
+  &.bg-white
+    .modal-background
+      background-color: rgba(255, 255, 255, 0.4)
+
+.pac-container::after
+  background-image: none !important
+  height: 0
+
+.toasted
+  &.info
+    background-color: $warning !important
+    color: $dark !important
+
+.custom-input-header
+  background-color: #f8f8f8 !important
+  mix-blend-mode: normal !important
+  border-radius: 5px !important
+
+.locator
+  .locator-input
+    width: 300px
+
+    @include mobile
+      width: 100%

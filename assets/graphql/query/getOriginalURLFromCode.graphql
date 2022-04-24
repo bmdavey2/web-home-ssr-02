@@ -1,0 +1,3 @@
+query getOriginalURLFromCode($code: String!) {
+  getOriginalURLFromCode(code: $code)
+}

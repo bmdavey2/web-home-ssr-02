@@ -1,0 +1,8 @@
+mutation unlike($CommentID: String!) {
+  unlike(CommentID: $CommentID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

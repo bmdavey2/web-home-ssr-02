@@ -1,0 +1,6 @@
+#import '../fragment/Business.graphql'
+query getBusinessProfile($id: String, $slug: String) {
+  Business(id: $id, slug: $slug) {
+    ...BusinessContents
+  }
+}

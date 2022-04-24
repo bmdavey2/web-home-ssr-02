@@ -1,0 +1,12 @@
+query getMyDisplayProfileMember {
+  result: Me {
+    Profile {
+      Member {
+        id
+        slug
+        name
+        profilePhotoURL
+      }
+    }
+  }
+}

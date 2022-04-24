@@ -1,0 +1,15 @@
+fragment GalleryContent on Gallery {
+  items {
+    FeedItem {
+      objectType
+      Update {
+        slug
+      }
+      Article {
+        slug
+      }
+    }
+    PhotoURL(type: "512")
+    VideoURL(type: "thumbnail")
+  }
+}

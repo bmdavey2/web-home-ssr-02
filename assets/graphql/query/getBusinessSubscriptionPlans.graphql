@@ -1,0 +1,15 @@
+query getBusinessSubscriptionPlans {
+  getBusinessSubscriptionPlans {
+    id
+    name
+    type
+    description
+    prices {
+      id
+      interval
+      discounted
+      currency
+      amount
+    }
+  }
+}

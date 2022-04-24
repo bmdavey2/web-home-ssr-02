@@ -1,0 +1,8 @@
+mutation unhighFiveNFTMedal($id: String!) {
+  unhighFiveNFTMedal(id: $id) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

@@ -1,0 +1,30 @@
+#import '../fragment/Product.graphql'
+
+query getProducts($type: String,$sortBy: String , $filterType: String , $category: String, $locationCountry:String ,  $coverPhotoSize: String, $count: Int) {
+  Products(
+    type: $type
+    category: $category
+    count: $count
+    preferredCurrency: "AUD"
+    filterType: $filterType
+    sortBy: $sortBy
+    businessID: null
+    offset: null
+    locationState: null
+    locationCountry: $locationCountry,
+    virtual: null
+    dateFrom: null
+    dateTo: null
+    priceFrom: null
+    priceTo: null
+    status: null
+    hidden: null
+  ) {
+    items {
+      ...ProductContents
+    }
+    count
+    next
+    total
+  }
+}

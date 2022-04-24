@@ -1,0 +1,19 @@
+#import '../fragment/Article.graphql'
+
+query getArticles(
+  $offset: Int
+  $count: Int
+  $sortBy: String
+  $categories: String
+  $coverPhotoSize: String
+  $profilePhotoSize: String
+) {
+  Articles(offset: $offset, count: $count, sortBy: $sortBy, categories: $categories) {
+    items {
+      ...ArticleContents
+    }
+    count
+    next
+    total
+  }
+}

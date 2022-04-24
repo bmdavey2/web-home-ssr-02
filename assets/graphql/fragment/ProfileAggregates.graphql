@@ -1,0 +1,32 @@
+fragment ProfileAggregatesContents on ProfileAggregates {
+  articles
+  updates
+  followers
+  follows
+  comments
+  commentsReceived
+  highFivesReceived
+  highFives
+  saves
+  savesAcquired
+  blocks
+  blocksAcquired
+  hides
+  hidesAcquired
+  rating
+  reviews
+  totalRates
+  acticlesViewsAcquired
+  articlesCommentReceived
+  articlesSavesAcquired
+  articlesHighFivesReceived
+  articlesDrafted
+  articlesPublished
+  articlesShared
+  videoFeeds
+  products
+  productViews
+  productViewsAcquired
+  productSaves
+  productSavesAcquired
+}

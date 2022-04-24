@@ -1,0 +1,34 @@
+#import './Member.graphql'
+
+fragment MediaContents on Media {
+  objectID
+  objectType
+  url
+  isNFTMedal
+  fileName
+  FileURL
+  PhotoURL
+  VideoURL
+  VideoThumbnail
+  MedalURL
+  orientation
+  Pin {
+    createdAt
+    photoID
+    Tags {
+      objectID
+      objectType
+      xCoordinate
+      yCoordinate
+      Member {
+        slug
+      }
+      Business {
+        slug
+      }
+      Product {
+        slug
+      }
+    }
+  }
+}

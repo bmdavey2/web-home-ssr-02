@@ -1,0 +1,59 @@
+#import '../fragment/Media.graphql'
+#import '../fragment/Product.graphql'
+#import '../fragmert/NFTUserMedal.graphql'
+
+query getNFTPostEventMedal(
+  $id: String
+  $slug: String
+  $coverPhotoSize: String
+  $distance: Float!
+  $distanceUnit: String!
+  $distanceType: String
+) {
+  getNFTPostEventMedal(id: $id, slug: $slug) {
+    id
+    createdAt
+    productID
+    slug
+    isFinished
+    Media(distance: $distance, distanceUnit: $distanceUnit, distanceType: $distanceType) {
+      objectID
+      objectType
+      url
+      orientation
+      isNFTMedal
+      fileName
+      FileURL
+      PhotoURL
+      VideoURL
+      VideoThumbnail
+      MedalURL
+    }
+    Product {
+      ...ProductContents
+    }
+    highFives
+    isHighFived
+    distances
+    peopleParticipated(distance: $distance, distanceUnit: $distanceUnit, distanceType: $distanceType)
+    averageFinishTime(distance: $distance, distanceUnit: $distanceUnit, distanceType: $distanceType)
+    Top3Male(distance: $distance, distanceUnit: $distanceUnit, distanceType: $distanceType) {
+      place
+      name
+      time
+      actor
+      firstName
+      lastName
+      profilePhotoURL(type: "100")
+    }
+    Top3Female(distance: $distance, distanceUnit: $distanceUnit, distanceType: $distanceType) {
+      place
+      name
+      time
+      actor
+      firstName
+      lastName
+      profilePhotoURL(type: "100")
+    }
+  }
+}

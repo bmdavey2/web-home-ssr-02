@@ -1,0 +1,37 @@
+query getBusinessMedals($slug: String, $preferredCurrency: String, $count: Int, $next: String) {
+  Business(slug: $slug) {
+    Medals(count: $count, next: $next) {
+      items {
+        id
+        isFinished
+        Media {
+          PhotoURL
+          VideoURL
+          VideoThumbnail
+          objectType
+          orientation
+        }
+        Product {
+          id
+          slug
+          title
+          startDate
+          startTime
+          city
+          state
+          country
+          pricing
+          priceAmount
+          viewerCurrency(preferredCurrency: $preferredCurrency)
+          Business {
+            name
+            profilePhotoURL
+          }
+        }
+      }
+      count
+      next
+      total
+    }
+  }
+}

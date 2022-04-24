@@ -1,0 +1,22 @@
+#import '../fragment/Product.graphql'
+query getAllUpcomingMedals($businessID: String, $businessSlug: String, $coverPhotoSize: String) {
+  getAllUpcomingMedals(businessID: $businessID, businessSlug: $businessSlug) {
+    items {
+      id
+      Media {
+        objectID
+        objectType
+        PhotoURL
+        VideoURL
+        VideoThumbnail
+        orientation
+      }
+      Product {
+        ...ProductContents
+      }
+    }
+    count
+    next
+    total
+  }
+}

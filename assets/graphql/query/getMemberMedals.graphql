@@ -1,0 +1,13 @@
+#import './fragment/NFTUserMedal.graphql'
+query getMemberMedals($slug: String, $count: Int, $next: String) {
+  Member(slug: $slug) {
+    Medals(count: $count, next: $next) {
+      items {
+        ...NFTUserMedalContents
+      }
+      count
+      next
+      total
+    }
+  }
+}

@@ -1,0 +1,8 @@
+mutation unfollow($MemberID: String, $BusinessID: String) {
+  unfollow(targetMemberID: $MemberID, targetBusinessID: $BusinessID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

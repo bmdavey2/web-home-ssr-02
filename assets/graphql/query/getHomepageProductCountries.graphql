@@ -1,0 +1,3 @@
+query getHomepageProductCountries ($text: String){
+  getHomepageProductCountries(text: $text)
+}

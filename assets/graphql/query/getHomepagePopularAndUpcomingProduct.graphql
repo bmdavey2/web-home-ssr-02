@@ -1,0 +1,6 @@
+#import '../fragment/Product.graphql'
+query getHomepagePopularAndUpcomingProduct($coverPhotoSize: String) {
+  getHomepagePopularAndUpcomingProduct {
+    ...ProductContents
+  }
+}

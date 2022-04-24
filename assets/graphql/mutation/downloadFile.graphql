@@ -1,0 +1,8 @@
+mutation downloadFile($objectID: String!, $objectType: String!) {
+  downloadFile(objectID: $objectID, objectType: $objectType) {
+    success
+    objectID
+    objectType
+    timestamp
+  }
+}

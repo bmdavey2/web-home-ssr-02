@@ -1,0 +1,11 @@
+fragment GalleryContents on Gallery {
+  items {
+    objectID
+    objectType
+    PhotoURL
+    VideoURL
+  }
+  count
+  next
+  total
+}

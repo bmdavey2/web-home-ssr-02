@@ -1,0 +1,8 @@
+mutation save($targetGetStreamActivityID: String) {
+  save(targetGetStreamActivityID: $targetGetStreamActivityID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

@@ -1,0 +1,14 @@
+fragment CategoriesContents on Category {
+  id
+  createdAt
+  updatedAt
+  name
+  iconName
+  summary
+  PhotoID
+  parent
+  archived
+  productCategory
+  communityInterest
+  PhotoURL
+}

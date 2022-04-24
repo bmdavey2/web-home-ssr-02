@@ -1,0 +1,12 @@
+query getMyProfile {
+  Me {
+    Owner {
+      id
+      firstName
+      lastName
+      name
+      slug
+      profilePhotoURL(type: "100")
+    }
+  }
+}

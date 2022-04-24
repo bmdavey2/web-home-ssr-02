@@ -1,0 +1,8 @@
+mutation downloadMedal($objectID: String!, $objectType: String!) {
+  downloadMedal(objectID: $objectID, objectType: $objectType) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

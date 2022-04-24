@@ -1,0 +1,4 @@
+/dist
+/.nuxt
+/static/firebase-auth-sw.js
+/types/graphql.ts

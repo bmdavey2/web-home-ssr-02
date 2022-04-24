@@ -1,0 +1,26 @@
+#import '../fragment/Product.graphql'
+
+query getNFTMedal($id: String, $slug: String, $coverPhotoSize: String) {
+  getNFTMedal(id: $id, slug: $slug) {
+    id
+    createdAt
+    medalDescription
+    productID
+    slug
+    isFinished
+    Media {
+      PhotoURL
+      VideoURL
+      VideoThumbnail
+      objectID
+      objectType
+      isNFTMedal
+      orientation
+    }
+    Product {
+      ...ProductContents
+    }
+    highFives
+    isHighFived
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "Event Organizer": null,
+  "Travel & Tour Operator": [
+    "Multi Day Tours",
+    "Single Day Tours",
+    "Travel Products Only"
+  ],
+  "Governing Body": null,
+  "Consumer Goods": [
+    "Apparel",
+    "Footwear",
+    "Accessories",
+    "Equipment",
+    "Supplements",
+    "Hydration",
+    "Nutrition"
+  ],
+  "Expert": [
+    {
+      "group": "Trainer",
+      "items": [
+        "Personal Trainer",
+        "Gym",
+        "Training Centre"
+      ]
+    },
+    {
+      "group": "Coach",
+      "items": [
+        "Triathlon Coach",
+        "Swimming Coach",
+        "Running Coach",
+        "Cycling Coach",
+        "Obstacle Race Coach",
+        "Mountain Bike Coach",
+        "Qualified Life Coach",
+        "Conditioning Coach"
+      ]
+    },
+    {
+      "group": "Instructor",
+      "items": [
+        "Yoga Instructor",
+        "Pilates Instructor"
+      ]
+    },
+    {
+      "group": "Qualified Practitioner",
+      "items": [
+        "Physiotheraphy",
+        "Podiatrist",
+        "Chiropractor",
+        "Massage Therapist",
+        "Nutritionist",
+        "Sports Medicine",
+        "Psychology",
+        "Exercise Physiology",
+        "Dietician",
+        "Occupational Therapist"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+#import '../fragment/Product.graphql'
+
+query getProduct($id: String, $slug: String, $preferredCurrency: String, $coverPhotoSize: String) {
+  Product(id: $id, slug: $slug, preferredCurrency: $preferredCurrency) {
+    ...ProductContents
+  }
+}

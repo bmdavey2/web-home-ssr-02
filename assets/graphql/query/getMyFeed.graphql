@@ -1,0 +1,11 @@
+#import '../fragmentFeedItemContents.graphql'
+
+query getMyFeed($CategoryID: String, $cursor: String, $count: Int) {
+  Me {
+    Timeline(CategoryID: $CategoryID, cursor: $cursor, count: $count) {
+      ...FeedItemContents
+      count
+      next
+    }
+  }
+}

@@ -1,0 +1,8 @@
+mutation createProfile($input: InputProfile!) {
+  createProfile(input: $input) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

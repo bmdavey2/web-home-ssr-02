@@ -1,0 +1,8 @@
+mutation follow($MemberID: String, $BusinessID: String) {
+  follow(targetMemberID: $MemberID, targetBusinessID: $BusinessID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

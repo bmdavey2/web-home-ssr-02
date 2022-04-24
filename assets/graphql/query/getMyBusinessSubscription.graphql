@@ -1,0 +1,6 @@
+query getMyBusinessSubscription {
+  getMyBusinessSubscription {
+    type
+    isPaid
+  }
+}

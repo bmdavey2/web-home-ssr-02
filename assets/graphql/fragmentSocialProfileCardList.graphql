@@ -1,0 +1,36 @@
+
+fragment SocialProfileCardList on SocialProfile {
+  objectType
+  Member {
+    id
+    name
+    slug
+    profilePhotoURL
+    isFollowed
+    Categories {
+      id
+      name
+    }
+    Aggregates {
+      articlesPublished
+      updates
+      likesReceived
+    }
+  }
+  Business {
+    id
+    name
+    slug
+    profilePhotoURL
+    isFollowed
+    Categories {
+      id
+      name
+    }
+    Aggregates {
+      articlesPublished
+      updates
+      likesReceived
+    }
+  }
+}

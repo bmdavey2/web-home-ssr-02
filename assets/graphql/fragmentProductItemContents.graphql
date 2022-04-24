@@ -1,0 +1,69 @@
+fragment ProfileProductContents on ProductsPage {
+  items {
+    id
+    Categories {
+      id
+      name
+      PhotoURL
+    }
+    Business {
+      id
+      name
+      slug
+      profilePhotoURL(type: "100")
+    }
+    createdAt
+    slug
+    type
+    title
+    coverPhotoURL(type: "700")
+    description
+    AdditionalInformation {
+      objectType
+      objectID
+      fileName
+      fileSize
+      fileType
+    }
+    UserID
+    actorType
+    parentID
+    repeats
+    hibernation
+    status
+    hidden
+    inquiryType
+    externalURL
+    startDate
+    endDate
+    startTime
+    endTime
+    timezone
+    virtual
+    address1
+    address2
+    city
+    state
+    country
+    postcode
+    pricing
+    priceAmount
+    viewerPrice(preferredCurrency: $preferredCurrency)
+    viewerPriceMax(preferredCurrency: $preferredCurrency)
+    viewerCurrency(preferredCurrency: $preferredCurrency)
+    currency
+    Media {
+      PhotoURL
+      VideoURL
+      FileURL
+      objectType
+      fileName
+    }
+    recommendsCount
+    viewsCount
+    savesCount
+    businessPaidPlan
+    isSaved
+    isNFTMedal
+  }
+}

@@ -1,0 +1,8 @@
+fragment BusinessContents on Business {
+  id
+  createdAt
+  slug
+  name
+  profilePhotoURL(type: "100")
+  website
+}

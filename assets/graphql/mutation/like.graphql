@@ -1,0 +1,8 @@
+mutation like($CommentID: String) {
+  like(CommentID: $CommentID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

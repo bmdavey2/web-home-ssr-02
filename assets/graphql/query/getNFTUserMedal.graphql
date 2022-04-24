@@ -1,0 +1,59 @@
+#import '../fragment/Business.graphql'
+#import ../fragment/Product.graphql'
+
+query getNFTUserMedal($id: String, $slug: String, $profilePhotSize: String, $coverPhotoSize: String) {
+  getNFTUserMedal(id: $id, slug: $slug) {
+    id
+    createdAt
+    updatedAt
+    actor
+    productID
+    medalID
+    blockchainHash
+    place
+    time
+    distance
+    distanceUnit
+    distanceType
+    ageGroupFinish
+    slug
+    bib
+    phoneNumber
+    userSlug
+    isClaimed
+    overallFinish
+    firstName
+    lastName
+    gender
+    country
+    profilePhotoURL(type: $profilePhotSize)
+    signUpNumber
+    Business {
+      id
+      slug
+      name
+    }
+    Product {
+      ...ProductContents
+    }
+    Medal {
+      id
+      highFives
+      isHighFived
+      Media {
+        objectID
+        objectType
+        url
+        isNFTMedal
+        fileName
+        FileURL
+        PhotoURL
+        VideoURL
+        VideoThumbnail
+        orientation
+      }
+    }
+    highFives
+    isHighFived
+  }
+}

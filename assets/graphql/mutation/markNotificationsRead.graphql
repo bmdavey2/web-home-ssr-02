@@ -1,0 +1,8 @@
+mutation markNotificationsRead($id: String) {
+  markNotificationsRead(id: $id) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

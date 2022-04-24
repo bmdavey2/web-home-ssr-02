@@ -1,0 +1,8 @@
+mutation NFTClaimMemberProfile($userMedalID: String) {
+  NFTClaimMemberProfile(userMedalID: $userMedalID) {
+    timestamp
+    success
+    objectID
+    objectType
+  }
+}

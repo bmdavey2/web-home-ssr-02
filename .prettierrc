@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 120,
+  "pugAttributeSeparator": "as-needed",
+  "pugClosingBracketPosition": "last-line",
+  "pugSingleQuote": false,
+  "pugSingleFileComponentIndentation": false,
+  "pugEmptyAttributes": "none"
+}
